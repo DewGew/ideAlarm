@@ -1,4 +1,4 @@
-# ideAlarm
+# ideAlarm v2.4.0
 Multiple zones dzVents alarm script for Domoticz
 
 License: GPL v3
