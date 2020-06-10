@@ -1,7 +1,7 @@
 --[[
 Edit this file suit your needs 
 Place this file in the dzVents scripts folder using the name ideAlarmConfig.lua
-See https://github.com/allan-gam/ideAlarm/wiki/configuration
+See https://github.com/dewgew/ideAlarm/wiki
 After editing, always verify that it's valid LUA at http://codepad.org/ (Mark your paste as "Private"!!!)
 --]]
 
