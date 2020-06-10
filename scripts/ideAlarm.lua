@@ -1,6 +1,6 @@
 --[[
 ideAlarm.lua
-Please read: https://github.com/allan-gam/ideAlarm/wiki
+Please read: https://github.com/dewgew/ideAlarm/wiki
 Do not change anything in this file.
 --]]
 
