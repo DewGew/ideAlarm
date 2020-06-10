@@ -8,7 +8,9 @@ License: GPL v3
 
 ## About
 ideAlarm is written in LUA and runs on the Domoticz built in dzVents Lua Framework.
+
 The name ideAlarm comes from merging the two words ideal and alarm.
+
 Your home is your castle. Keeping it safe and secure is a top priority of many homeowners. With ideAlarm, you can easily set up your own DIY Home Security System using the sensors that you already have in domoticz.
 
 ## Disclaimer
