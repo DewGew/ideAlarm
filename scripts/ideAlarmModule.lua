@@ -1,6 +1,6 @@
 --[[
 ideAlarm.lua
-Please read: https://github.com/allan-gam/ideAlarm/wiki
+Please read: https://github.com/dewgew/ideAlarm/wiki
 Copyright (C) 2017  BakSeeDaa
 		This program is free software: you can redistribute it and/or modify
 		it under the terms of the GNU General Public License as published by
