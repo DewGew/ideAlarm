@@ -421,7 +421,12 @@ local function onSensorChange(domoticz, device)
 					domoticz.log(sensorName..' in zone '..alarmZone.name..' was tripped', domoticz.LOG_INFO)
 					local alarmStatus = domoticz.devices(alarmZone.statusTextDevID).state
 					if  alarmStatus ~= ZS_TRIPPED and alarmStatus ~= ZS_TIMED_OUT and alarmStatus ~= ZS_ALERT then
-						if (alarmZone.entryDelay > 0) then  -- Skip ZS_TRIPPED status if 0 secs entry delay
+						local entryDelay = 0
+						if alarmZone.armingMode(domoticz) == domoticz.SECURITY_ARMEDAWAY then
+							entryDelay = sensorConfig.entryDelay
+						end
+--						if (alarmZone.entryDelay > 0) then  -- Skip ZS_TRIPPED status if 0 secs entry delay
+						if (entryDelay > 0) then  -- Skip ZS_TRIPPED status if 0 secs entry delay
 							alarmZone._updateZoneStatus(domoticz, ZS_TRIPPED)
 						end
 						alarmZone._updateZoneStatus(domoticz, ZS_TIMED_OUT, alarmZone.entryDelay) 
