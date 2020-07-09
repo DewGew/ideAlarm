@@ -42,16 +42,17 @@ _C.ALARM_ZONES = {
 		name='My Home',
 		armingModeTextDevID=550,
 		statusTextDevID=554,
+		entryDelay=15,
 		exitDelay=20,
 		alertDevices={'Siren', 'Garden Lights'},
 		sensors = {
-			['Entrance Door'] = {['class'] = SENSOR_CLASS_A, ['nag'] = true, ['nagTimeoutMins'] = 5, ['armWarn'] = true,  ['entryDelay'] = 15, ['enabled'] = true},
-			['Another Door'] = {['class'] = SENSOR_CLASS_A, ['nag'] = true, ['nagTimeoutMins'] = 5, ['armWarn'] = true,  ['entryDelay'] = 0, ['enabled'] = true},
+			['Entrance Door'] = {['class'] = SENSOR_CLASS_A, ['nag'] = true, ['nagTimeoutMins'] = 5, ['armWarn'] = true, ['enabled'] = true},
+			['Another Door'] = {['class'] = SENSOR_CLASS_A, ['nag'] = true, ['nagTimeoutMins'] = 5, ['armWarn'] = true, ['enabled'] = true},
 
 			-- enabled can be a boolean or a function as in the example below
 			-- The sensor below will only trigger the alarm if
 			-- "Master" is not at home and it's dark
-			['Garden Shed Door'] = {['class'] = SENSOR_CLASS_A, ['nag'] = true, ['nagTimeoutMins'] = 5, ['armWarn'] = true,  ['entryDelay'] = 15, ['enabled'] =
+			['Garden Shed Door'] = {['class'] = SENSOR_CLASS_A, ['nag'] = true, ['nagTimeoutMins'] = 5, ['armWarn'] = true, ['enabled'] =
 				function(domoticz)
 					return (domoticz.devices('Master Present').state ~= 'On'
 						and domoticz.time.isNightTime)	
@@ -71,11 +72,12 @@ _C.ALARM_ZONES = {
 		name = 'Pembridge Square Residence',
 		armingModeTextDevID = 551,
 		statusTextDevID = 555,
+		entryDelay = 15,
 		exitDelay = 15,
 		alertDevices={'Notting Hill Alert Horn', 'Big Ben Chimes'},
 		sensors = {
-			['Big Gate'] = {['class'] = SENSOR_CLASS_A, ['nag'] = true, ['nagTimeoutMins'] = 5, ['armWarn'] = true,  ['entryDelay'] = 15, ['enabled'] = true},
-			['Patio Door'] = {['class'] = SENSOR_CLASS_B, ['nag'] = true, ['nagTimeoutSecs'] = 5, ['armWarn'] = true,  ['entryDelay'] = 0, ['enabled'] = true},
+			['Big Gate'] = {['class'] = SENSOR_CLASS_A, ['nag'] = true, ['nagTimeoutMins'] = 5, ['armWarn'] = true, ['enabled'] = true},
+			['Patio Door'] = {['class'] = SENSOR_CLASS_B, ['nag'] = true, ['nagTimeoutSecs'] = 5, ['armWarn'] = true, ['enabled'] = true},
 		},
 		armAwayToggleBtn = 'Toggle Z2 Arm Away',
 		armHomeToggleBtn = 'Toggle Z2 Arm Home',
