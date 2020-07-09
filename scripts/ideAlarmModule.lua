@@ -17,7 +17,7 @@ Copyright (C) 2017  BakSeeDaa
 local config = require "ideAlarmConfig"
 local custom = require "ideAlarmHelpers"
 
-local scriptVersion = '2.4.0'
+local scriptVersion = '2.5.0'
 local ideAlarm = {}
 
 -- Possible Zone statuses
