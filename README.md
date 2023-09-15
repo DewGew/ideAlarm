@@ -1,4 +1,7 @@
 # ideAlarm v2.4.0
+
+<i>ideAlarm is deprecated and not maintained anymore</i>
+
 Multiple zones dzVents alarm script for Domoticz
 
 License: GPL v3
